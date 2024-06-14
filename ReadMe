@@ -1,0 +1,39 @@
+Node.js JWT Authentication Server
+
+- User registration and signup with bcrypt password hashing.
+- User login with JWT token generation.
+- Secured APIs to list all registered users and view user details, authenticated with JWT tokens.
+- Error handling for duplicate email addresses during registration.
+- Integrated with Sequelize ORM for database operations.
+- Express middleware for parsing JSON bodies and JWT token authentication.
+
+Technologies Used
+
+- Node.js
+- Express.js
+- Sequelize ORM
+- SQLite (for local development)
+- bcrypt (for password hashing)
+- JSON Web Tokens (JWT) for authentication
+
+Getting Started
+
+> Installation- npm install
+> Run
+> npm start
+
+Endpoints
+
+POST /register
+Register a user with firstName, lastName, email, password, and phoneNumber.
+
+POST /api/login
+To log in a user with email and password, returns a JWT token.
+
+GET /api/users
+To get a list of all registered users (excluding passwords), secured by JWT.
+
+GET /api/users/:id
+To get all details of users by its ID, secured by JWT.
+
+
